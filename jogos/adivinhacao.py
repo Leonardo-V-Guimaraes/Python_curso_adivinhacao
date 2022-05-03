@@ -57,5 +57,9 @@ def jogar():
 
     print ("Fim do jogo!")
 
+# Este if faz com que o arquivo adivinhacao.py seja executado sem o jogos.py...
+# motivo... Quando ele é executado ele gera um arquivo chamado __main__, por isso ...
+# o __name__ ==. Fazendo com isso ele executar a função jogar() quando existe um import para ...
+# outro arquivo.
 if(__name__ == "__main__"):
     jogar()
