@@ -1,0 +1,12 @@
+azul
+verde
+amarelo
+roxo
+rosa
+vermelho
+laranja
+marrom
+cinza
+branco
+preto
+bege
