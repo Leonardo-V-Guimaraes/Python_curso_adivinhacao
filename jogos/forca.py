@@ -31,8 +31,8 @@ def jogar(): # Definir Função
             break
         print(letras_acertadas)            
 
-    if("_" not in letras_acertadas): #Faz a leitura do "_", caso não tenha essa sequencia ele termina o jogo
-        imprime_mensagem_vencedor() 
+    if("_" not in letras_acertadas): #Faz a leitura do "_", caso não tenha essa sequencia ele retorna mensagem de vencedor
+        imprime_mensagem_vencedor(palavra_secreta) 
     else:
         imprime_mensagem_perdedor(palavra_secreta)
 
@@ -46,14 +46,14 @@ def imprime_mensagem_abertura():
 
 def carrega_palavra_secreta():
 
-    print("(1) Frutas (2) Cores")
+    print("(1) Frutas (2) Cores") 
     lista_de_jogo = int(input("escolha qual lista deseja: ")) # Convertendo para INT, passando pela comparação a baixo
-    
+    # Lembrando que quando for para fazer uma comparação entre STR(string) - numero, deve converter o STR para INT
     if (lista_de_jogo == 1):
         print("\n""Frutas!")
         lista_de_jogo = "frutas.txt"
     elif (lista_de_jogo == 2):
-        print("\n""Cores")
+        print("\n""Cores!")
         lista_de_jogo = "cores.txt"
 
     with open(lista_de_jogo) as arquivo: # O uso do with substitui a necessidade de ter que dar um .close() ele faz isso por padrão
